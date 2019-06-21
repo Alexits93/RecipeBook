@@ -1,0 +1,9 @@
+<div class="list-group-item d-flex" *ngFor="let recipe of recipes">
+  <div class="col-6">
+    <h4 class="list-group-item-heading"><a href="#">{{recipe.name}}</a></h4>
+    <p class="list-group-item-text">{{recipe.description}}</p>
+  </div>
+  <span class="col-6">
+        <a href="#"><img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-fluid"></a>
+      </span>
+</div>
