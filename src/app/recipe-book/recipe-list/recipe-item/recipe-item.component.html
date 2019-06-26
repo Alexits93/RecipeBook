@@ -1,9 +1,9 @@
-<div class="list-group-item d-flex" *ngFor="let recipe of recipes">
+<div class="list-group-item list-group-item-action d-flex" (click)="onRecipeSelected()">
   <div class="col-6">
-    <h4 class="list-group-item-heading"><a href="#">{{recipe?.name}}</a></h4>
+    <h4 class="list-group-item-heading">{{recipe?.name}}</h4>
     <p class="list-group-item-text">{{recipe?.description}}</p>
   </div>
   <span class="col-6">
-    <a href="#"><img [src]="recipe?.imagePath" alt="{{recipe?.name}}" class="img-fluid"></a>
+    <img [src]="recipe?.imagePath" alt="{{recipe?.name}}" class="img-fluid">
   </span>
 </div>
