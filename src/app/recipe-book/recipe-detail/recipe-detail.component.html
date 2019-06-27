@@ -15,9 +15,9 @@
         Manage recipe
       </button>
       <ul class="dropdown-menu" ngbDropdownMenu>
-        <li class="dropdown-item" ngbDropdownItem>To Shopping List</li>
-        <li class="dropdown-item" ngbDropdownItem>Edit Recipe</li>
-        <li class="dropdown-item" ngbDropdownItem>Delete Recipe</li>
+        <li class="dropdown-item cursor-pointer" ngbDropdownItem (click)="toShoppingList()">To Shopping List</li>
+        <li class="dropdown-item cursor-pointer" ngbDropdownItem>Edit Recipe</li>
+        <li class="dropdown-item cursor-pointer" ngbDropdownItem>Delete Recipe</li>
       </ul>
     </div>
   </div>
@@ -29,6 +29,9 @@
 </div>
 <div class="row">
   <div class="col-12 col-xl-6">
-    Ingredients
+    <h4>Ingredients:</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of selectedRecipe.ingredients">{{ingredient.name}} ({{ingredient.amount}})</li>
+    </ul>
   </div>
 </div>
