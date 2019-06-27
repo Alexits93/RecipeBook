@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col">
-    <button class="btn btn-success">New Recipe</button>
+    <button class="btn btn-success" [ngClass]="selectedRecipe ? 'mr-1' : null">New Recipe</button>
+    <button class="btn btn-primary" *ngIf="selectedRecipe" (click)="clearSelectedRecipe()">Close Recipe</button>
   </div>
 </div>
 <hr>
@@ -11,8 +12,7 @@
   <div class="col-12 col-md-6 col-xl-8">
     <app-recipe-detail
       *ngIf="selectedRecipe;else noRecipeSelected"
-      [selectedRecipe]="selectedRecipe"
-      (clearSelectedRecipe)="clearSelectedRecipe()"></app-recipe-detail>
+      [selectedRecipe]="selectedRecipe"></app-recipe-detail>
     <ng-template #noRecipeSelected>
       <h3 class="text-center">Please select a recipe!</h3>
     </ng-template>

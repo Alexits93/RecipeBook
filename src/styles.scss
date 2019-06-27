@@ -4,18 +4,3 @@
 .cursor-pointer {
   cursor: pointer;
 }
-
-.close-item {
-  position: absolute;
-  display: block;
-  top: -10px;
-  right: -10px;
-  cursor: pointer;
-  background: white;
-  border-radius: 50%;
-  height: 1.5rem;
-  i {
-    font-size: 1.6rem;
-    color: $danger;
-  }
-}
