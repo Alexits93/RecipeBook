@@ -10,14 +10,14 @@
 </div>
 <div class="row">
   <div class="col">
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown" ngbDropdown>
+      <button class="btn btn-primary dropdown-toggle" type="button" ngbDropdownToggle>
         Manage recipe
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li class="dropdown-item">To Shopping List</li>
-        <li class="dropdown-item">Edit Recipe</li>
-        <li class="dropdown-item">Delete Recipe</li>
+      <ul class="dropdown-menu" ngbDropdownMenu>
+        <li class="dropdown-item" ngbDropdownItem>To Shopping List</li>
+        <li class="dropdown-item" ngbDropdownItem>Edit Recipe</li>
+        <li class="dropdown-item" ngbDropdownItem>Delete Recipe</li>
       </ul>
     </div>
   </div>

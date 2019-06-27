@@ -4,6 +4,7 @@
     "preserveWhitespaces": true
   },
   "compilerOptions": {
+    "target": "es5",
     "outDir": "../out-tsc/app",
     "baseUrl": "",
     "types": []
