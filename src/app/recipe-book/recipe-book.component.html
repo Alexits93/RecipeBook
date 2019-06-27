@@ -1,8 +1,14 @@
 <div class="row">
-  <div class="col-md-5">
+  <div class="col">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-12 col-md-6 col-xl-4">
     <app-recipe-list (selectedRecipe)="selectedRecipe = $event"></app-recipe-list>
   </div>
-  <div class="col-md-7">
+  <div class="col-12 col-md-6 col-xl-8">
     <app-recipe-detail
       *ngIf="selectedRecipe;else noRecipeSelected"
       [selectedRecipe]="selectedRecipe"

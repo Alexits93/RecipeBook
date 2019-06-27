@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col">
+  <div class="col-12 col-xl-6">
     <div class="d-inline-block position-relative">
       <a (click)="closeSelectedRecipe()" class="close-item"><i class="far fa-times-circle"></i></a>
       <img [src]="selectedRecipe.imagePath" alt="{{selectedRecipe.name}}" class="img-fluid">
@@ -7,12 +7,12 @@
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-12 col-xl-6">
     <h1>{{selectedRecipe.name}}</h1>
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-12 col-xl-6">
     <div class="dropdown" ngbDropdown>
       <button class="btn btn-primary dropdown-toggle" type="button" ngbDropdownToggle>
         Manage recipe
@@ -26,12 +26,12 @@
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-12 col-xl-6">
     {{selectedRecipe.description}}
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-12 col-xl-6">
     Ingredients
   </div>
 </div>
