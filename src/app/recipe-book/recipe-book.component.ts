@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Recipe} from './recipe.model';
 import {RecipeService} from './recipe.service';
 
@@ -9,16 +9,18 @@ import {RecipeService} from './recipe.service';
   providers: [RecipeService]
 })
 export class RecipeBookComponent implements OnInit {
-  @Input() selectedRecipe: Recipe;
-  @Output() closeSelectedRecipe = new EventEmitter();
+  selectedRecipe: Recipe;
 
-  constructor() {
+  constructor(private recipeService: RecipeService) {
   }
 
   ngOnInit() {
+    this.recipeService.recipeSelected.subscribe( (recipe: Recipe) => {
+      this.selectedRecipe = recipe;
+    });
   }
 
-  clearSelectedRecipe() {
+  clearRecipeSelected() {
     this.selectedRecipe = null;
   }
 }

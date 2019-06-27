@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col">
     <button class="btn btn-success" [ngClass]="selectedRecipe ? 'mr-1' : null">New Recipe</button>
-    <button class="btn btn-primary" *ngIf="selectedRecipe" (click)="clearSelectedRecipe()">Close Recipe</button>
+    <button class="btn btn-primary" *ngIf="selectedRecipe" (click)="clearRecipeSelected()">Close Recipe</button>
   </div>
 </div>
 <hr>
 <div class="row">
   <div class="col-12 col-md-6 col-xl-4">
-    <app-recipe-list (selectedRecipe)="selectedRecipe = $event"></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-12 col-md-6 col-xl-8">
     <app-recipe-detail

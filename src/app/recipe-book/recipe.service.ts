@@ -1,12 +1,11 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {Recipe} from './recipe.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
-
-  constructor() { }
+  recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe('Hungarian Gulasch', 'From Hungary', 'http://www.mnhsz.com/storage/upload/2017/marhaporkolt_bogracsban.jpg'),
@@ -17,4 +16,6 @@ export class RecipeService {
   getRecipes(): Recipe[] {
     return this.recipes.slice();
   }
+
+
 }
