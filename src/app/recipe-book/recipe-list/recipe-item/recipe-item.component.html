@@ -1,4 +1,6 @@
-<div class="list-group-item list-group-item-action d-flex recipe-card cursor-pointer" (click)="onRecipeSelected()">
+<a class="list-group-item list-group-item-action d-flex recipe-card cursor-pointer"
+  [routerLink]="[slug]"
+  routerLinkActive="active">
   <div class="col-6">
     <h4 class="list-group-item-heading">{{recipe?.name}}</h4>
     <p class="list-group-item-text">{{recipe?.description}}</p>
@@ -6,4 +8,4 @@
   <span class="col-6 text-right">
     <img [src]="recipe?.imagePath" alt="{{recipe?.name}}" class="img-fluid">
   </span>
-</div>
+</a>

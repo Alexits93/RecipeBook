@@ -13,6 +13,7 @@ import {RecipeItemComponent} from './recipe-book/recipe-list/recipe-item/recipe-
 import {RecipeDetailComponent} from './recipe-book/recipe-detail/recipe-detail.component';
 import {FormsModule} from '@angular/forms';
 import {ShoppingListService} from './shopping-list/shopping-list.service';
+import { RecipeStartComponent } from './recipe-book/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
     RecipeBookComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,
