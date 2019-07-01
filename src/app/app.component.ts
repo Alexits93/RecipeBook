@@ -7,7 +7,6 @@ import {Title} from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  page = 'recipes';
 
   public constructor(private titleService: Title) {
     this.setTitle('Recipe Book');
@@ -15,9 +14,5 @@ export class AppComponent {
 
   setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
-  }
-
-  activePage(feature: string) {
-    this.page = feature;
   }
 }

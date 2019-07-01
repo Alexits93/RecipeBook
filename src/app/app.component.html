@@ -1,11 +1,8 @@
-<app-header
-  (navigatedPage)="activePage($event)"
-  [page]="page"></app-header>
+<app-header></app-header>
 <div class="container-fluid py-3">
   <div class="row">
     <div class="col">
-      <app-recipe-book *ngIf="page === 'recipes'"></app-recipe-book>
-      <app-shopping-list *ngIf="page === 'shopping-list'"></app-shopping-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
