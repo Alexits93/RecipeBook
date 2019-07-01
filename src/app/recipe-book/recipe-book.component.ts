@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {RecipeService} from './recipe.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
@@ -8,13 +8,10 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./recipe-book.component.scss'],
   providers: [RecipeService]
 })
-export class RecipeBookComponent implements OnInit {
+export class RecipeBookComponent {
 
   constructor(private router: Router,
               private route: ActivatedRoute) {
-  }
-
-  ngOnInit() {
   }
 
   onNewRecipe() {

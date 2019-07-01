@@ -1,9 +1,7 @@
-import {EventEmitter} from '@angular/core';
 import {Recipe} from './recipe.model';
 import {Ingredient} from '../shared/ingredient.model';
 
 export class RecipeService {
-  recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe(1, 'Hungarian Gulasch', 'hungarian-gulasch', 'From Hungary',
@@ -27,7 +25,7 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
-  getSelectedRecipe(slug: string) {
+  getSelectedRecipe(slug: string ) {
     return this.recipes.find( (recipe: Recipe) => recipe.slug === slug);
   }
 
